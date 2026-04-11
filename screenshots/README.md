@@ -11,4 +11,5 @@
 | 06-winserver-static-ip.png | Windows Server static IP configuration |
 | 07-ubuntu-static-ip.png | Ubuntu static IP configuration |
 | 08-ping-ubuntu-to-server.png | Successful ping from Ubuntu to Windows Server |
-| 09-ping-server-to-ubuntu.png | Successful ping from Windows Server to Ubuntu |
+| 09-ping-server-to-ubuntu.png | Successful ping from Windows Server to Ubuntu | 10-icmpv4-firewall-rule-enabled.png | ICMP firewall fix |
+|
