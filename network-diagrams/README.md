@@ -10,7 +10,7 @@ A visual representation of the virtual lab network environment.
 | lab-topology.xml | Network topology diagram — draw.io source file |
 
 ## Tool Used
-draw.io (app.diagrams.net) — free, no account required
+draw.io
 
 ## What the Diagram Shows
 - Three VMs: WinServer2022, Win10Client, Ubuntu2204
