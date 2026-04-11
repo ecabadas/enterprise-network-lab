@@ -1,16 +1,20 @@
-# Network Diagram
+# Network Diagrams
 
-## Status
-In progress
+## Lab Topology
+A visual representation of the virtual lab network environment.
 
-## Description
-This section will contain the network topology diagram for the virtual lab environment.
-
-The diagram will include:
-- Windows VM
-- Linux VM
-- VirtualBox network configuration (NAT / Host-only / Internal Network)
-- IP addressing scheme
+## Files
+| File | Description |
+|------|-------------|
+| lab-topology.png | Network topology diagram — exported image |
+| lab-topology.xml | Network topology diagram — draw.io source file |
 
 ## Tool Used
-Planned: Lucidchart (or similar diagramming tool)
+draw.io (app.diagrams.net) — free, no account required
+
+## What the Diagram Shows
+- Three VMs: WinServer2022, Win10Client, Ubuntu2204
+- Virtual switch (labnet) — 192.168.10.0/24 internal network
+- NAT adapter on Windows Server for internet access
+- Static and dynamic IP assignments
+- Connection types (internal vs NAT)
