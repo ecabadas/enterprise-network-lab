@@ -1,85 +1,51 @@
-# Virtual Lab Setup Log
-Enterprise Network Configuration & Troubleshooting Lab
+# Lab Setup Log
 
-## Overview
-This document tracks the step-by-step setup of a virtualized enterprise-style network environment using VirtualBox. The lab includes a Windows Server, Windows 10 client, and Ubuntu 24.04 Linux VM.
+A chronological log of all work completed on this project.
 
 ---
 
-## Phase 1: Environment Preparation
+## April 10, 2026 — Phase 1: VM Setup & Network Configuration
 
-### Completed Actions
-- Installed Oracle VirtualBox on host machine (Lenovo ThinkPad X1 Carbon)
-- Downloaded required ISO files:
-  - Windows Server ISO
-  - Windows 10 Client ISO
-  - Ubuntu 24.04 ISO
+### Environment Setup
+- Downloaded and installed VirtualBox
+- Downloaded Windows Server 2022 Evaluation ISO
+- Downloaded Ubuntu 22.04 LTS ISO
+- Downloaded Windows 10 Pro ISO
 
----
+### Virtual Machine Creation
+- Created WinServer2022 VM (4096MB RAM, 50GB disk)
+- Created Ubuntu2204 VM (2048MB RAM, 25GB disk)
+- Created Win10Client VM (4096MB RAM, 40GB disk)
+- Configured network adapters for all three VMs
 
-## Phase 2: Virtual Machine Creation
+### Operating System Installation
+- Installed Windows Server 2022 Desktop Experience
+- Installed Ubuntu 22.04 LTS
+- Installed Windows 10 Pro
 
-### Virtual Machines Created
-- Windows Server VM
-- Windows 10 Client VM
-- Ubuntu Linux VM
+### Network Configuration
+- Assigned static IP 192.168.10.10 to Windows Server
+- Assigned static IP 192.168.10.20 to Ubuntu
+- Enabled ICMPv4 inbound rule on Windows Server firewall
 
-### Configuration Steps
-For each VM:
-- Created new virtual machine shell in VirtualBox
-- Assigned appropriate OS type and version
-- Allocated system resources (RAM and CPU)
-- Created virtual hard disks (VDI, dynamically allocated)
+### Verification
+- Confirmed bidirectional ping between Windows Server and Ubuntu
+- 0% packet loss on all connectivity tests
 
----
-
-## Phase 3: Network Configuration
-
-### Windows Server VM
-- Adapter 1: NAT (for external internet access if needed)
-- Adapter 2: Internal Network (labnet)
-
-### Windows 10 Client VM
-- Adapter 1: Internal Network (labnet)
-
-### Ubuntu VM
-- Adapter 1: Internal Network (labnet)
-
-### Network Notes
-- Internal Network name standardized as: `labnet`
-- This network is intended to simulate an isolated enterprise environment
-- NAT adapter on Windows Server allows optional external connectivity for updates or package installs
+### Issues Encountered
+- Win10 VM displayed green/orange screen on first boot
+- Resolved by adjusting boot order, video memory to 128MB,
+  and graphics controller to VMSVGA
+- Windows Server blocked ICMP by default
+- Resolved by enabling ICMPv4 inbound rule in Windows Defender 
+  Firewall Advanced Settings
 
 ---
 
-## Phase 4: ISO Attachment
-
-### Completed Actions
-- Attached Windows Server ISO to Windows Server VM storage controller
-- Attached Windows 10 ISO to Windows 10 VM storage controller
-- Attached Ubuntu 24.04 ISO to Ubuntu VM storage controller
+## April 11, 2026 — Phase 2: DNS & DHCP Configuration
+*(in progress)*
 
 ---
 
-## Phase 5: Documentation
-
-### Evidence Collected
-- Screenshots of:
-  - VM creation process
-  - Network adapter configuration
-  - Storage/ISO attachment setup
-
----
-
-## Current Status
-- Virtual machines created and configured
-- Network segmentation implemented (Internal Network: labnet)
-- Installation phase pending (OS setup not yet completed)
-
----
-
-## Next Steps
-- Install operating systems on all virtual machines
-- Verify IP addressing and network connectivity
-- Begin ping testing between systems
-- Document troubleshooting scenarios
+## April 12, 2026 — Phase 3: Troubleshooting & Packet Capture
+*(upcoming)*
