@@ -27,12 +27,12 @@ A chronological log of all work completed on this project.
 - Assigned static IP 192.168.10.10 to Windows Server
 - Assigned static IP 192.168.10.20 to Ubuntu
 - Enabled ICMPv4 inbound rule on Windows Server firewall
-*(pending - Win10 VM network configuration)*
+- *(pending - Win10 VM network configuration)*
 
 ### Verification
 - Confirmed bidirectional ping between Windows Server and Ubuntu
 - 0% packet loss on all connectivity tests
-*(pending - Win10 VM bidirectional ping communication)*
+- *(pending - Win10 VM bidirectional ping communication)*
 
 ### Issues Encountered
 - Win10 VM displayed green/orange screen on first boot
