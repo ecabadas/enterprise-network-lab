@@ -1,10 +1,4 @@
-# Lab Setup Log
-
-A chronological log of all work completed on this project.
-
----
-
-## April 10, 2026 — Phase 1: VM Setup & Network Configuration
+## April 10–11, 2026 — Phase 1: VM Setup & Network Configuration
 
 ### Environment Setup
 - Downloaded and installed VirtualBox
@@ -26,21 +20,29 @@ A chronological log of all work completed on this project.
 ### Network Configuration
 - Assigned static IP 192.168.10.10 to Windows Server
 - Assigned static IP 192.168.10.20 to Ubuntu
+- Assigned static IP 192.168.10.30 to Win10Client (temporary)
 - Enabled ICMPv4 inbound rule on Windows Server firewall
-- *(pending - Win10 VM network configuration)*
+- Enabled ICMPv4 inbound rule on Windows 10 firewall
 
 ### Verification
-- Confirmed bidirectional ping between Windows Server and Ubuntu
-- 0% packet loss on all connectivity tests
-- *(pending - Win10 VM bidirectional ping communication)*
+- Win10 → Windows Server: 4/4 packets, 0% loss
+- Win10 → Ubuntu: 4/4 packets, 0% loss
+- Server → Win10: 4/4 packets, 0% loss
+- Ubuntu → Win10: 4/4 packets, 0% loss
+- Full three-way connectivity confirmed across all nodes
 
 ### Issues Encountered
 - Win10 VM displayed green/orange screen on first boot
-- Resolved by adjusting boot order, video memory to 128MB,
-  and graphics controller to VMSVGA
+  - Resolved by correcting boot order (Optical first), 
+    setting video memory to 128MB, graphics controller to VMSVGA
 - Windows Server blocked ICMP by default
-- Resolved by enabling ICMPv4 inbound rule in Windows Defender 
-  Firewall Advanced Settings
+  - Resolved by enabling ICMPv4 inbound rule in Windows 
+    Defender Firewall Advanced Settings
+- Windows 10 blocked ICMP by default
+  - Resolved by enabling ICMPv4 inbound rule in Windows 
+    Defender Firewall Advanced Settings
+- Win10 mouse not captured in VirtualBox
+  - Resolved after VM resume on following session
 
 ---
 
