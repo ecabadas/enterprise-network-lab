@@ -1,4 +1,7 @@
-## April 10–11, 2026 — Phase 1: VM Setup & Network Configuration
+# Lab Setup Log
+## A chronological log of all work completed on this project.
+
+## April 10, 2026 — Phase 1: VM Setup & Network Configuration
 
 ### Environment Setup
 - Downloaded and installed VirtualBox
