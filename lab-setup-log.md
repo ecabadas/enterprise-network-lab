@@ -49,10 +49,67 @@
 
 ---
 
-## April 11, 2026 — Phase 2: DNS & DHCP Configuration
-*(in progress)*
+## April 13, 2026 — Phase 2: DNS & DHCP Configuration
+
+### Roles Installed
+- Installed DHCP Server role on WinServer2022 via Server Manager
+- Installed DNS Server role on WinServer2022 via Server Manager
+- Completed DHCP post-install configuration and authorized server
+- Restarted DHCP service to apply security group changes
+
+### DHCP Configuration
+- Created new scope named TechCore-Office
+- Scope range: 192.168.10.50 — 192.168.10.100
+- Subnet mask: 255.255.255.0
+- Default gateway: 192.168.10.10
+- Lease duration: 8 hours
+- Activated scope immediately after creation
+
+### DNS Configuration
+- Created forward lookup zone: lab.local
+- Created host (A) records for all three machines:
+  - server.lab.local → 192.168.10.10
+  - ubuntu.lab.local → 192.168.10.20
+  - win10client.lab.local → 192.168.10.30
+
+### Verification — Windows Server
+- nslookup server.lab.local → resolved 192.168.10.10
+- nslookup ubuntu.lab.local → resolved 192.168.10.20
+- nslookup win10client.lab.local → resolved 192.168.10.30
+
+### Verification — Windows 10
+- Switched from static IP to DHCP
+- Received IP 192.168.10.50 from TechCore-Office scope
+- DHCP server identified as 192.168.10.10
+- nslookup server.lab.local → resolved 192.168.10.10
+- nslookup ubuntu.lab.local → resolved 192.168.10.20
+- nslookup win10client.lab.local → resolved 192.168.10.30
+- ping server.lab.local → 4/4 packets, 0% loss
+
+### Verification — Ubuntu
+- Configured /etc/resolv.conf to use 192.168.10.10 as DNS
+- dig server.lab.local → resolved 192.168.10.10
+- dig ubuntu.lab.local → resolved 192.168.10.20
+- dig win10client.lab.local → resolved 192.168.10.30
+- ping server.lab.local → 4/4 packets, 0% loss
+- ping ubuntu.lab.local → 4/4 packets, 0% loss
+- ping win10client.lab.local → 4/4 packets, 0% loss
+
+### Issues Encountered
+- Windows Server nslookup initially queried Comcast DNS
+  instead of local server
+  - Resolved by setting preferred DNS to 192.168.10.10
+    on the labnet adapter
+- Ubuntu ignored DHCP-assigned DNS server due to local
+  resolver override
+  - Resolved by manually editing /etc/resolv.conf and
+    adding nameserver 192.168.10.10
+- Windows 10 had second network adapter using Comcast DNS
+  - Resolved by disabling the non-labnet adapter
 
 ---
 
-## April 12, 2026 — Phase 3: Troubleshooting & Packet Capture
+## April 14, 2026 — Phase 3: Troubleshooting & Packet Capture
 *(upcoming)*
+
+---
