@@ -61,7 +61,7 @@ solution using Windows Server 2022.
 
 ## Project Status
 - [x] Phase 1 — VM setup and network configuration
-- [ ] Phase 2 — DNS and DHCP configuration
+- [x] Phase 2 — DNS and DHCP configuration
 - [ ] Phase 3 — Troubleshooting and Wireshark packet capture
 
 ## Documentation
