@@ -1,21 +1,18 @@
 # Linux Lab Notes
 
 ## Status
-Initial setup (not yet configured)
+Complete (April 2026)
 
-## Objective
-- Set up Ubuntu VM in VirtualBox
-- Configure network settings
-- Enable communication with Windows VM
-- Practice basic Linux networking commands
+## What Was Done
+- Ubuntu 22.04 LTS installed in VirtualBox (2048MB RAM, 25GB disk)
+- Static IP 192.168.10.20 on the labnet internal network
+- DNS pointed at 192.168.10.10 (Windows Server); verified with dig and nslookup
+- Full bidirectional connectivity with the Windows nodes verified by ping, including by hostname
 
-## Planned Work
-- Install Ubuntu updates
-- Configure IP settings
-- Test connectivity with Windows VM
+## Commands Used
+- ip addr — confirmed IP assignment
+- ping — verified connectivity to server and clients
+- dig — verified DNS resolution against the lab.local zone
+- traceroute — traced paths between nodes
 
-## Commands to practice
-- ip a
-- ping
-- traceroute
-- nslookup
+Full chronological log: ../lab-setup-log.md

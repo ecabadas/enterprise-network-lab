@@ -6,8 +6,8 @@ A visual representation of the virtual lab network environment.
 ## Files
 | File | Description |
 |------|-------------|
-| lab-topology.png | Network topology diagram — exported image |
-| lab-topology.xml | Network topology diagram — draw.io source file |
+| lab-topology.drawio.png | Network topology diagram — exported image |
+| lab-topology.drawio | Network topology diagram — draw.io source file |
 
 ## Tool Used
 draw.io

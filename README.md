@@ -65,7 +65,7 @@ solution using Windows Server 2022.
 - [ ] Phase 3 — Troubleshooting and Wireshark packet capture
 
 ## Documentation
-- Network topology diagram: network-diagrams/lab-topology.png
+- Network topology diagram: network-diagrams/lab-topology.drawio.png
 - IP scheme: configs/ip-scheme.md
 - Lab log: lab-setup-log.md
 - Screenshots: screenshots/
