@@ -1,16 +1,3 @@
-# Network Lab Portfolio
-
-Hands-on networking projects — a production home network I built and debugged with Ubiquiti's engineering team, and a virtualized enterprise lab.
-
-## Projects
-
-| Project | What it is | Status |
-|---|---|---|
-| [Home Network Build](home-network/) | Rebuilt my home network around a Ubiquiti Cloud Gateway Max. Day one surfaced a WAN throughput bug; two weeks of structured troubleshooting isolated it to the gateway's 2.5G forwarding path, and Ubiquiti's dev team used my test data to prescribe the fix. | Active — stable on vendor fix, waiting on permanent fix |
-| Enterprise Network Lab (below) | Virtualized small-office network (Windows Server 2022 + Windows 10 + Ubuntu) with centralized DNS and DHCP for a simulated 10-person firm. | Phase 1–2 done, Phase 3 pending |
-
----
-
 # Enterprise Network Lab — TechCore Solutions
 
 ## Overview
