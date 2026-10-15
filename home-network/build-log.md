@@ -14,4 +14,4 @@
 
 - Gateway stable on the dev-team fix, monitoring ongoing
 - Known limitation: the three runtime commands must be reapplied after any reboot
-- Next: IoT/guest VLAN segmentation, remote-access VPN, small home server
+- Work in progress — next: NAS for family photos/media, Proxmox home server (AdGuard Home, VPN, game server), IoT/guest VLAN segmentation

@@ -57,9 +57,13 @@ The fix involves runtime commands that do not survive a reboot, so I reapply the
 
 ## What's Next
 
+> **Work in progress.** This build is ongoing — what's documented here is what's done and verified so far. The roadmap below is what I'm building toward.
+
 - Monitoring throughput stability over time
 - Waiting on Ubiquiti's permanent fix
-- Planned: segmented VLANs for IoT and guest, a VPN for remote access, and a small home server (AdGuard Home, VPN, game server)
+- Planned: NAS (network attached storage) for family photos and media
+- Planned: Proxmox hypervisor on a small home server to host AdGuard Home (DNS filtering), a remote-access VPN, and a game server
+- Planned: finishing the IoT and guest VLAN segmentation
 
 ---
 
