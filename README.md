@@ -62,7 +62,7 @@ solution using Windows Server 2022.
 ## Project Status
 - [x] Phase 1 — VM setup and network configuration
 - [x] Phase 2 — DNS and DHCP configuration
-- [ ] Phase 3 — Troubleshooting and Wireshark packet capture
+- [x] Phase 3 — Troubleshooting and Wireshark packet capture
 
 ## Documentation
 - Network topology diagram: network-diagrams/lab-topology.drawio.png
@@ -70,3 +70,4 @@ solution using Windows Server 2022.
 - Lab log: lab-setup-log.md
 - Screenshots: screenshots/
 - Troubleshooting notes: troubleshooting/
+- Wireshark DNS analysis: troubleshooting/wireshark-dns-analysis.md
